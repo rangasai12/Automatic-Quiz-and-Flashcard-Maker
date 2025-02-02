@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --background-light: #ffffff;
+  /* --foreground-light: #171717;
+  --background-dark: #0a0a0a; */
+  --foreground-dark: #ededed;
+  --primary-color: #1d4ed8;
+  --secondary-color: #9333ea;
+  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--background-dark);
+    --foreground: var(--foreground-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  font-family: var(--font-sans);
+  transition: background 0.3s, color 0.3s;
+}
